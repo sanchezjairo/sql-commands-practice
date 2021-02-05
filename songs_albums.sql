@@ -6,7 +6,11 @@
  * 
  * Note that album - song is a one-to-many relationship, so no bridge table is needed.
  */
-
+CREATE TABLE Songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name STRING_AGG,
+    album_id FOREIGN KEY,
+)
 CREATE TABLE Albums (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(70) NOT NULL,
